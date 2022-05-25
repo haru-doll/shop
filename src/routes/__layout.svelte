@@ -4,6 +4,8 @@
 	import { base } from '$app/paths';
 
 	const year = new Date().getFullYear();
+
+	const lang = 'en'; // TODO
 </script>
 
 <header class="text-gray-600 bg-white body-font drop-shadow-md">
@@ -13,8 +15,12 @@
 			<span class="ml-3 text-xl">Harudoll</span>
 		</a>
 		<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-			<a class="mx-2.5 hover:text-gray-900" href="{base}/about">About</a>
-			<a class="mx-2.5 hover:text-gray-900" href="{base}/cart">Cart</a>
+			<a class="mx-2.5 hover:text-gray-900" href="{base}/about"
+				>{#if lang === 'vn'}Giới thiệu{:else}About{/if}</a
+			>
+			<a class="mx-2.5 hover:text-gray-900" href="{base}/cart"
+				>{#if lang === 'vn'}Giỏ hàng{:else}Cart{/if}</a
+			>
 		</nav>
 	</div>
 </header>

@@ -1,3 +1,21 @@
+<script>
+	const lang = 'vn'; // TODO
+</script>
+
+<section class="text-gray-600 body-font">
+	<div class="max-w-2xl px-8 py-24 mx-auto">
+		<div class="flex flex-col">
+			{#each [1, 2, 3] as product}
+				<div class="border border-gray-200 p-6 my-4 rounded-lg">
+					<span class="font-medium text-lg">TODO</span>
+					<!-- TODO quantity -->
+					<!-- TODO remove -->
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
 <section class="text-gray-600 body-font relative">
 	<div class="absolute inset-0 bg-gray-300">
 		<iframe
@@ -17,7 +35,9 @@
 			class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
 		>
 			<div class="relative mb-4">
-				<label for="contract" class="leading-7 text-sm text-gray-600">Contract</label>
+				<label for="contract" class="leading-7 text-sm text-gray-600"
+					>{#if lang === 'vn'}Địa chỉ liên lạc{:else}Contract{/if}</label
+				>
 				<input
 					type="text"
 					id="email"
@@ -35,7 +55,9 @@
 				/>
 			</div>
 			<div class="relative mb-4">
-				<label for="message" class="leading-7 text-sm text-gray-600">Note</label>
+				<label for="message" class="leading-7 text-sm text-gray-600"
+					>{#if lang === 'vn'}Ghi chú{:else}Note{/if}</label
+				>
 				<textarea
 					id="message"
 					name="message"
@@ -46,9 +68,7 @@
 				class="text-orange-50 bg-orange-400 border-0 py-2 px-6 hover:bg-orange-500 rounded text-lg"
 				>Order</button
 			>
-			<p class="text-xs text-gray-500 mt-3">
-				Chicharrones blog helvetica normcore iceland tousled brook viral artisan.
-			</p>
+			<p class="text-xs text-gray-500 mt-3">TODO</p>
 		</div>
 	</div>
 </section>
