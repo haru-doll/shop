@@ -1,21 +1,21 @@
 <script>
-	const lang = 'vn'; // TODO
+	import { lang } from './language.ts';
 </script>
 
-<section class="text-gray-600 body-font">
+<section class="text-gray-600 body-font bg-[url('/static/bg.jpg')] bg-fixed bg-cover">
 	<div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-		<img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center" src="/static/logo.png" />
+		<img class="lg:w-1/5 w-2/5 mb-10 object-cover object-center" src="/static/logo.png" />
 		<div class="text-center lg:w-2/3 w-full">
 			<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-				{#if lang === 'vn'}
-					TODO
+				{#if $lang === 'vn'}
+					Haru n Chip
 				{:else}
 					Hi dear, welcome to my shop!
 				{/if}
 			</h1>
 			<p class="mb-8 leading-relaxed">
-				{#if lang === 'vn'}
-					TODO
+				{#if $lang === 'vn'}
+					Outfit for dolls
 				{:else}
 					Here I have a lot of doll and every things for your doll like clothes or furniture. I
 					accept PayPal and have international shipping for all items that I sell. Please contact to
@@ -33,22 +33,17 @@
 					href="https://twitter.com/Haru_dollstore"
 					target="_blank">Twitter</a
 				>
-				<a
-					class="mx-2 inline-flex text-orange-50 bg-orange-400 border-0 py-2 px-6 hover:bg-orange-500 rounded text-lg"
-					href="https://paypal.me/vnharudoll"
-					target="_blank">PayPal</a
-				>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-gray-800 bg-slate-100 body-font">
+<section class="text-gray-800 bg-white body-font">
 	<div class="container px-5 py-24 mx-auto flex flex-wrap">
 		<div class="flex flex-wrap w-full">
 			<div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
 				<h1 class="title-font sm:text-4xl text-3xl mb-10 font-medium text-gray-900 text-center">
-					{#if lang === 'vn'}Các bước order{:else}How to buy{/if}
+					{#if $lang === 'vn'}Các bước order{:else}How to buy{/if}
 				</h1>
 
 				<div class="flex relative pb-12">
@@ -62,10 +57,10 @@
 					</div>
 					<div class="flex-grow pl-4">
 						<h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-							{#if lang === 'vn'}BƯỚC{:else}STEP{/if} 1
+							{#if $lang === 'vn'}BƯỚC{:else}STEP{/if} 1
 						</h2>
 						<p class="leading-relaxed text-justify">
-							{#if lang === 'vn'}
+							{#if $lang === 'vn'}
 								Check caption của ảnh để xem chi tiết thông tin sản phẩm, bao gồm giá, hạn đóng
 								order, kích thước, set bao gồm những sản phẩm gì. Nếu muốn doll hoặc đồ không có
 								trong album thì inbox link mình check trực tiếp tình trạng hàng nhé.
@@ -88,10 +83,10 @@
 					</div>
 					<div class="flex-grow pl-4">
 						<h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-							{#if lang === 'vn'}BƯỚC{:else}STEP{/if} 2
+							{#if $lang === 'vn'}BƯỚC{:else}STEP{/if} 2
 						</h2>
 						<p class="leading-relaxed text-justify">
-							{#if lang === 'vn'}
+							{#if $lang === 'vn'}
 								Chuyển khoản cho mình trước hạn đóng order, nếu muốn du di thời gian vài ngày thì
 								cũng phải báo trước để mình đón dư slot.
 							{:else}
@@ -112,10 +107,10 @@
 					</div>
 					<div class="flex-grow pl-4">
 						<h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-							{#if lang === 'vn'}BƯỚC{:else}STEP{/if} 3
+							{#if $lang === 'vn'}BƯỚC{:else}STEP{/if} 3
 						</h2>
 						<p class="leading-relaxed text-justify">
-							{#if lang === 'vn'}
+							{#if $lang === 'vn'}
 								Inbox báo lại mình sau khi đã chuyển khoản, check
 							{:else}
 								Tell me after you paid. You can also check your name in
@@ -123,9 +118,9 @@
 							<a
 								class="underline hover:text-black"
 								href="https://docs.google.com/spreadsheets/d/1JZJsTSkxbe-Z8De-Y1i0bReCoWZ9aQodVxoJMPflaDk/?fbclid=IwAR35v1H4K4vo8ENKBg86VglxhxI3QHhY_Ep36emSs-Xh_93ILINRllD8Wro"
-								>{#if lang === 'vn'}danh sách order{:else}this list{/if}</a
+								>{#if $lang === 'vn'}danh sách order{:else}this list{/if}</a
 							>
-							{#if lang === 'vn'}
+							{#if $lang === 'vn'}
 								vào hôm sau, nếu thấy thiếu tên hoặc sai sản phẩm thì báo lại mình liền.
 							{:else}
 								to confirm your order is okay or not.
@@ -144,10 +139,10 @@
 					</div>
 					<div class="flex-grow pl-4">
 						<h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-							{#if lang === 'vn'}BƯỚC{:else}STEP{/if} 4
+							{#if $lang === 'vn'}BƯỚC{:else}STEP{/if} 4
 						</h2>
 						<p class="leading-relaxed text-justify">
-							{#if lang === 'vn'}
+							{#if $lang === 'vn'}
 								Quá trình con thành hình sau đó sẽ được update trong album liên quan, check album
 								hoặc bảng danh sách để xem tiến độ. Con về mình sẽ đăng thông báo trên page. Nếu quá
 								lâu không có người đón con mình sẽ đăng thông báo hạn cuối trong album trẻ lạc trước
@@ -179,10 +174,10 @@
 					</div>
 					<div class="flex-grow pl-4">
 						<h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-							{#if lang === 'vn'}LƯU Ý{:else}FINISH{/if}
+							{#if $lang === 'vn'}LƯU Ý{:else}FINISH{/if}
 						</h2>
 						<p class="leading-relaxed text-justify">
-							{#if lang === 'vn'}
+							{#if $lang === 'vn'}
 								Nếu sau khi con đã có mẹ khác đón mà mẹ ruột mới tới tìm thì tùy trường hợp sẽ có
 								refund một phần hoặc không. Thế nên mẹ nào đón con mà lâu quá không thấy bé thì cũng
 								phải để ý page một chút nhé không có mình nhượng mất là không chịu trách nhiệm đâu
@@ -204,16 +199,16 @@
 	</div>
 </section>
 
-<section class="text-gray-600 bg-slate-200 body-font">
+<section class="text-gray-600 bg-slate-100 body-font">
 	<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 		<div
 			class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
 		>
 			<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-				{#if lang === 'vn'}Sản xuất{:else}Producer{/if}
+				{#if $lang === 'vn'}Sản xuất{:else}Producer{/if}
 			</h1>
 			<p class="mb-8 leading-relaxed text-justify">
-				{#if lang === 'vn'}
+				{#if $lang === 'vn'}
 					Mình nhận sản xuất từ tối thiểu 100 bé, các mẹ đưa bản vẽ mình check giá với xưởng tùy
 					theo thiết kế. Nếu đã nhắm trước xưởng muốn đặt như Anna, Xiha... thì có thể yêu cầu trực
 					tiếp, không thì có thể tham khảo doll mình từng sản xuất tại xưởng riêng mình liên kết

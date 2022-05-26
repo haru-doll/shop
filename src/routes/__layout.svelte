@@ -2,24 +2,27 @@
 	import '../app.css';
 	export const prerender = true;
 	import { base } from '$app/paths';
+	import { lang } from './language.ts';
 
 	const year = new Date().getFullYear();
 
-	const lang = 'en'; // TODO
+	function switchLanguage() {
+		lang.update(currentLang => currentLang === 'vn' ? 'en' : 'vn');
+	}
 </script>
 
-<header class="text-gray-600 bg-white body-font drop-shadow-md">
-	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-		<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="{base}/">
+<header class="text-gray-600 bg-slate-50 body-font drop-shadow-md">
+	<div class="container mx-auto flex p-5 flex-row items-center">
+		<a class="flex title-font font-medium items-center text-gray-900" href="{base}/">
 			<img alt="Icon" src="/static/icon.png" class="w-10 h-10" />
 			<span class="ml-3 text-xl">Harudoll</span>
 		</a>
-		<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+		<nav class="ml-auto flex flex-wrap items-center text-base justify-center">
 			<a class="mx-2.5 hover:text-gray-900" href="{base}/about"
-				>{#if lang === 'vn'}Giới thiệu{:else}About{/if}</a
+				>{#if $lang === 'vn'}Giới thiệu{:else}About{/if}</a
 			>
-			<a class="mx-2.5 hover:text-gray-900" href="{base}/cart"
-				>{#if lang === 'vn'}Giỏ hàng{:else}Cart{/if}</a
+			<button class="mx-2.5 hover:text-gray-900" on:click={switchLanguage}
+				>{#if $lang === 'vn'}EN{:else}VN{/if}</button
 			>
 		</nav>
 	</div>
@@ -39,7 +42,7 @@
 		<p
 			class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
 		>
-			&#169; Copyright 2022-{year}
+			Since 2018 | &#169; Copyright 2021-{year}
 		</p>
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-gray-400">
 			<a
