@@ -7,24 +7,23 @@
 	const year = new Date().getFullYear();
 
 	function switchLanguage() {
-		lang.update(currentLang => currentLang === 'vn' ? 'en' : 'vn');
+		lang.update((currentLang) => (currentLang === 'vn' ? 'en' : 'vn'));
 	}
 </script>
 
+<svelte:head>
+	<title>Harudoll</title>
+</svelte:head>
+
 <header class="text-gray-600 bg-slate-50 body-font drop-shadow-md">
-	<div class="container mx-auto flex p-5 flex-row items-center">
-		<a class="flex title-font font-medium items-center text-gray-900" href="{base}/">
+	<div class="container mx-auto flex p-5 flex-row items-center title-font font-medium text-xl">
+		<a class="flex items-center text-gray-900" href="{base}/">
 			<img alt="Icon" src="/static/icon.png" class="w-10 h-10" />
-			<span class="ml-3 text-xl">Harudoll</span>
+			<span class="ml-3">Harudoll</span>
 		</a>
-		<nav class="ml-auto flex flex-wrap items-center text-base justify-center">
-			<a class="mx-2.5 hover:text-gray-900" href="{base}/about"
-				>{#if $lang === 'vn'}Giới thiệu{:else}About{/if}</a
-			>
-			<button class="mx-2.5 hover:text-gray-900" on:click={switchLanguage}
-				>{#if $lang === 'vn'}EN{:else}VN{/if}</button
-			>
-		</nav>
+		<button class="ml-auto text-sm" on:click={switchLanguage}
+			>[{#if $lang === 'vn'}EN{:else}VN{/if}]</button
+		>
 	</div>
 </header>
 
@@ -46,7 +45,7 @@
 		</p>
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start text-gray-400">
 			<a
-				class="inline-flex items-center"
+				class="inline-flex items-center hover:text-white"
 				href="https://www.facebook.com/harunchip.dolls"
 				target="_blank"
 			>
@@ -63,7 +62,7 @@
 				Facebook
 			</a>
 			<a
-				class="ml-5 inline-flex items-center"
+				class="ml-5 inline-flex items-center hover:text-white"
 				href="https://twitter.com/Haru_dollstore"
 				target="_blank"
 			>
