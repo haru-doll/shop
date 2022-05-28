@@ -36,8 +36,8 @@
 
 		if (errorEmail || errorName || errorLink) return;
 
-		console.log(orderEmail, orderName, orderLink, orderNote, orderData);
 		// TODO
+		console.log(orderEmail, orderName, orderLink, orderNote, orderData);
 	}
 </script>
 

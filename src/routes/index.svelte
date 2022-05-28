@@ -40,7 +40,7 @@
 </section>
 
 <section class="text-gray-600 bg-white body-font">
-	<div class="container px-5 py-24 mx-auto">
+	<div class="container px-5 py-32 mx-auto">
 		<div class="flex flex-wrap -m-4">
 			{#each Object.entries(products) as [id, product] (id)}
 				<div class="lg:w-1/4 md:w-1/2 p-4 w-full duration-200 hover:scale-105 hover:drop-shadow-xl">
@@ -288,10 +288,6 @@
 		height: 100px;
 	}
 
-	.custom-shape-divider-top-1653682464 .shape-fill {
-		fill: #ffffff;
-	}
-
 	.custom-shape-divider-bottom-1653682539 {
 		position: absolute;
 		bottom: 0;
@@ -308,7 +304,7 @@
 		height: 100px;
 	}
 
-	.custom-shape-divider-bottom-1653682539 .shape-fill {
+	.shape-fill {
 		fill: #ffffff;
 	}
 </style>
