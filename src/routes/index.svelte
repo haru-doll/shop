@@ -54,7 +54,7 @@
 		<div class="flex flex-wrap -m-4">
 			{#each Object.entries(products) as [id, product] (id)}
 				<div class="lg:w-1/4 md:w-1/2 p-4 w-full duration-200 hover:scale-105 hover:drop-shadow-xl">
-					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="./p-{id}">
+					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="./p_{id}">
 						<img
 							alt="Preview"
 							class="object-cover object-center w-full h-full block"

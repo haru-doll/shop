@@ -3,7 +3,7 @@
 	export const prerender = true;
 
 	import { page } from '$app/stores';
-	const bill = JSON.parse(atob($page.url.searchParams.get('info')));
+	const bill = JSON.parse(atob(decodeURIComponent($page.params.info)));
 
 	const paymentMethods = [
 		{
