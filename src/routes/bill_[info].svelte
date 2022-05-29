@@ -88,7 +88,7 @@
 							<img
 								alt={paymentMethod.title}
 								class="object-cover object-center h-full w-full"
-								src="/static/paymentmethod/{paymentMethod.name}.jpg"
+								src="/paymentmethod/{paymentMethod.name}.jpg"
 							/>
 						</div>
 						<h2 class="text-xl font-medium title-font text-gray-900 mt-5">{paymentMethod.title}</h2>
@@ -124,7 +124,7 @@
 				<img
 					class="object-cover object-center rounded"
 					alt="Paypal"
-					src="/static/paymentmethod/paypal.jpg"
+					src="/paymentmethod/paypal.jpg"
 				/>
 			</div>
 		</div>

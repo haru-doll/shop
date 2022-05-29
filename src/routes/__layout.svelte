@@ -11,7 +11,7 @@
 <header class="text-gray-600 bg-slate-50 body-font drop-shadow-md">
 	<div class="container mx-auto flex p-5 flex-row items-center title-font font-medium text-xl">
 		<a class="flex items-center text-gray-900" href="{base}/">
-			<img alt="Icon" src="/static/icon.png" class="w-10 h-10" />
+			<img alt="Icon" src="/icon.png" class="w-10 h-10" />
 			<span class="ml-3">Harudoll</span>
 		</a>
 		<button
@@ -30,7 +30,7 @@
 			class="flex title-font font-medium items-center md:justify-start justify-center text-white"
 			href="{base}/"
 		>
-			<img alt="Logo" src="/static/logo.png" class="w-12 h-12" />
+			<img alt="Logo" src="/logo.png" class="w-12 h-12" />
 			<span class="ml-3 text-xl">Harudoll</span>
 		</a>
 		<p
