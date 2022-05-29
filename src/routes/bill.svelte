@@ -1,5 +1,9 @@
 <script>
 	import { lang } from './language.ts';
+	export const prerender = true;
+
+	import { page } from '$app/stores';
+	const bill = JSON.parse(atob($page.url.searchParams.get('info')));
 
 	const paymentMethods = [
 		{
@@ -20,14 +24,47 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Harudoll</title>
+</svelte:head>
+
+<section class="text-gray-600 body-font">
+	<div class="container px-5 py-16 mx-auto flex flex-col items-center">
+		<h1 class="my-16 title-font sm:text-4xl text-3xl w-full text-center font-medium text-gray-900">
+			{#if $lang === 'vn'}
+				Cảm ơn vì đã đặt hàng!
+			{:else}
+				Thank you for your order!
+			{/if}
+		</h1>
+		<p class="mb-8">
+			{#if $lang === 'vn'}Đây là hoá đơn của bạn{:else}Here is your bill{/if}:
+		</p>
+		<div
+			class="sm:w-96 w-80 sm:px-6 px-4 py-10 bg-gray-200 rounded drop-shadow-lg font-mono whitespace-pre-line overflow-x-auto"
+		>
+			<p>ID: {bill.id}</p>
+			<p class="mt-2 mb-8 leading-none whitespace-pre">
+				█ █ █▀█ █▀█ █ █ █▀▄ █▀█ █  █<br />█▀█ █▀█ █▀▄ █▄█ █▄▀ █▄█ █▄ █▄
+			</p>
+			<p>
+				{#if $lang === 'vn'}Khách hàng{:else}Customer{/if}: {decodeURIComponent(bill.name)}
+			</p>
+			<p>{decodeURIComponent(bill.product[$lang])}</p>
+			<p>-----------------------------</p>
+			<p class="font-bold">
+				{#if $lang === 'vn'}Tổng tiền{:else}Total{/if}: {bill.total[
+					$lang
+				]}{#if $lang === 'vn'}K{:else}${/if}
+			</p>
+			<p class="italic">
+				{#if $lang === 'vn'}Chưa bao gồm phí ship{:else}Shipping fee is not included{/if}.
+			</p>
+		</div>
+	</div>
+</section>
+
 <section class="text-gray-600 body-font min-h-screen">
-	<h1 class="title-font sm:text-4xl text-3xl mt-24 w-full text-center font-medium text-gray-900">
-		{#if $lang === 'vn'}
-			Cảm ơn vì đã đặt hàng!
-		{:else}
-			Thank you for your order!
-		{/if}
-	</h1>
 	{#if $lang === 'vn'}
 		<div class="container px-5 py-24 mx-auto">
 			<div class="flex flex-col text-center w-full mb-12">

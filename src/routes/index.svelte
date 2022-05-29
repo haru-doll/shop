@@ -1,11 +1,21 @@
 <script>
 	import { lang } from './language.ts';
+	export const prerender = true;
+
 	import products from './products.json';
 </script>
 
+<svelte:head>
+	<title>Harudoll</title>
+</svelte:head>
+
 <section class="text-gray-600 body-font bg-[url('/static/bg.jpg')] bg-fixed bg-cover">
 	<div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-		<img class="lg:w-1/5 w-2/5 mb-10 object-cover object-center" src="/static/logo.png" />
+		<img
+			class="lg:w-1/5 w-2/5 mb-10 object-cover object-center"
+			alt="Logo"
+			src="/static/logo.png"
+		/>
 		<div class="text-center lg:w-2/3 w-full">
 			<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
 				{#if $lang === 'vn'}
@@ -44,7 +54,7 @@
 		<div class="flex flex-wrap -m-4">
 			{#each Object.entries(products) as [id, product] (id)}
 				<div class="lg:w-1/4 md:w-1/2 p-4 w-full duration-200 hover:scale-105 hover:drop-shadow-xl">
-					<a class="block relative h-48 rounded overflow-hidden" href="./p{id}">
+					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="./p-{id}">
 						<img
 							alt="Preview"
 							class="object-cover object-center w-full h-full block"
@@ -228,6 +238,7 @@
 				</div>
 			</div>
 			<img
+				alt="Showcase"
 				class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
 				src="/static/showcase.jpg"
 			/>
@@ -266,7 +277,7 @@
 			</p>
 		</div>
 		<div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-			<img class="object-cover object-center rounded" alt="hero" src="/static/producer.svg" />
+			<img class="object-cover object-center rounded" alt="Producer" src="/static/producer.svg" />
 		</div>
 	</div>
 </section>

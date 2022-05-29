@@ -12,12 +12,12 @@
 			{
 				"name": { "en": "Motorbike", "vn": "Xe máy" },
 				"price": { "en": 10, "vn": 100 },
-				"quantity": 0
+				"quantity": 7
 			},
 			{
 				"name": { "en": "Skateboard", "vn": "Ván trượt" },
 				"price": { "en": 1, "vn": 30 },
-				"quantity": 7
+				"quantity": null
 			}
 		]
 	},

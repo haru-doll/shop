@@ -1,19 +1,12 @@
 <script>
 	import '../app.css';
-	export const prerender = true;
 	import { base } from '$app/paths';
+
 	import { lang } from './language.ts';
+	export const prerender = true;
 
 	const year = new Date().getFullYear();
-
-	function switchLanguage() {
-		lang.update((currentLang) => (currentLang === 'vn' ? 'en' : 'vn'));
-	}
 </script>
-
-<svelte:head>
-	<title>Harudoll</title>
-</svelte:head>
 
 <header class="text-gray-600 bg-slate-50 body-font drop-shadow-md">
 	<div class="container mx-auto flex p-5 flex-row items-center title-font font-medium text-xl">
@@ -21,7 +14,9 @@
 			<img alt="Icon" src="/static/icon.png" class="w-10 h-10" />
 			<span class="ml-3">Harudoll</span>
 		</a>
-		<button class="ml-auto text-sm" on:click={switchLanguage}
+		<button
+			class="ml-auto text-sm"
+			on:click={() => ($lang === 'vn' ? lang.set('en') : lang.set('vn'))}
 			>[{#if $lang === 'vn'}EN{:else}VN{/if}]</button
 		>
 	</div>
