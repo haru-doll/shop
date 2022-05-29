@@ -11,7 +11,7 @@ const config = {
 			fallback: 'index.html'
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/haru-doll.github.io' : ''
+			base: process.env.NODE_ENV === 'production' ? '/web' : ''
 		}
 	}
 };
