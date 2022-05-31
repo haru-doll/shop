@@ -92,7 +92,7 @@
 				})
 			)
 		);
-		goto(`./bill?b=${billInfo}`);
+		goto(`/bill?b=${billInfo}`);
 	}
 </script>
 
