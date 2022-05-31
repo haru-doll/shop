@@ -8,10 +8,14 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html'
+			fallback: null,
+			precompress: false
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/shop' : ''
+		},
+		prerender: {
+			default: true
 		}
 	}
 };

@@ -1,3 +1,7 @@
+<script context="module">
+    export const prerender = false;
+</script>
+
 <script>
 	import { lang } from './language.ts';
 
@@ -6,20 +10,22 @@
 
 	const paymentMethods = [
 		{
+			image: "https://i.imgur.com/lOiwYCc.jpg",
 			name: 'techcombank',
 			title: 'Techcombank',
 			description:
 				'11724489027011<br/>Chủ tài khoản: Nguyễn Minh Châu<br/>Chi nhánh: Hoàng Quốc Việt<br/>(Hoặc Hà Nội, hoặc hội sở chính)'
 		},
 		{
+			image: "https://i.imgur.com/IgP5jz5.jpg",
 			name: 'tpbank',
 			title: 'TPbank',
 			description:
 				'00169156001<br/>Chủ tài khoản: Nguyễn Minh Châu<br/>Chi nhánh: Đống Đa<br/>(Hoặc Hà Nội, hoặc Hội sở chính)'
 		},
-		{ name: 'viettelpay', title: 'Viettel pay', description: '0376163497' },
-		{ name: 'shopeepay', title: 'ShopeePay', description: 'Harudoll' },
-		{ name: 'grabpay', title: 'Grab Pay (hoặc ví Moca)', description: '0376163497' }
+		{ image: "https://i.imgur.com/4UrdItO.jpg", name: 'viettelpay', title: 'Viettel pay', description: '0376163497' },
+		{ image: "https://i.imgur.com/c6Gsdv4.jpg", name: 'shopeepay', title: 'ShopeePay', description: 'Harudoll' },
+		{ image: "https://i.imgur.com/2xJyHua.jpg", name: 'grabpay', title: 'Grab Pay (hoặc ví Moca)', description: '0376163497' }
 	];
 </script>
 
@@ -87,7 +93,7 @@
 							<img
 								alt={paymentMethod.title}
 								class="object-cover object-center h-full w-full"
-								src="/paymentmethod/{paymentMethod.name}.jpg"
+								src={paymentMethod.image}
 							/>
 						</div>
 						<h2 class="text-xl font-medium title-font text-gray-900 mt-5">{paymentMethod.title}</h2>
@@ -123,7 +129,7 @@
 				<img
 					class="object-cover object-center rounded"
 					alt="Paypal"
-					src="/paymentmethod/paypal.jpg"
+					src="https://i.imgur.com/VUJoOD0.jpg"
 				/>
 			</div>
 		</div>
