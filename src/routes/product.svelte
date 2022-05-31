@@ -5,8 +5,8 @@
 	import Carousel from '@beyonk/svelte-carousel';
 
 	import { page } from '$app/stores';
-	import datas from './products.json';
-	const data = datas[$page.params.id];
+	import datas from '$lib/products.json';
+	const data = datas[$page.url.searchParams.get('p')];
 
 	let orderData = {};
 	data.products.map((product) => {
@@ -92,7 +92,7 @@
 				})
 			)
 		);
-		goto(`./bill_${billInfo}`);
+		goto(`./bill?b=${billInfo}`);
 	}
 </script>
 

@@ -9,10 +9,10 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: 'index.html'
-		}),
-		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/web' : ''
-		}
+		})
+		// paths: {
+			// base: process.env.NODE_ENV === 'production' ? '/web' : ''
+		// }
 	}
 };
 

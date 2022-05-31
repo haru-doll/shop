@@ -2,14 +2,14 @@
 	import { lang } from './language.ts';
 	export const prerender = true;
 
-	import products from './products.json';
+	import products from '$lib/products.json';
 </script>
 
 <svelte:head>
 	<title>Harudoll</title>
 </svelte:head>
 
-<section class="text-gray-600 body-font bg-[url('/bg.jpg')] bg-fixed bg-cover">
+<section class="text-gray-600 body-font bg-[url('$lib/assets/bg.jpg')] bg-fixed bg-cover">
 	<div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
 		<img
 			class="lg:w-1/5 w-2/5 mb-10 object-cover object-center"
@@ -54,7 +54,7 @@
 		<div class="flex flex-wrap -m-4">
 			{#each Object.entries(products) as [id, product] (id)}
 				<div class="lg:w-1/4 md:w-1/2 p-4 w-full duration-200 hover:scale-105 hover:drop-shadow-xl">
-					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="./p_{id}">
+					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="./product?p={id}">
 						<img
 							alt="Preview"
 							class="object-cover object-center w-full h-full block"
