@@ -92,7 +92,7 @@
 				})
 			)
 		);
-		goto(`${$page.url['origin']}/bill?b=${billInfo}`);
+		goto(`/bill?b=${billInfo}`);
 	}
 </script>
 
