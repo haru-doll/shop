@@ -3,7 +3,6 @@ import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	trailingSlash: 'always',
 	preprocess: preprocess(),
 	kit: {
 		adapter: adapter({
