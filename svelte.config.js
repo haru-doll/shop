@@ -15,7 +15,8 @@ const config = {
 		},
 		prerender: {
 			default: true
-		}
+		},
+		appDir: 'internal'
 	}
 };
 
