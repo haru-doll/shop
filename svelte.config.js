@@ -8,7 +8,9 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: null
+			fallback: null,
+			precompress: false,
+			trailingSlash: 'always'
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/shop' : ''
