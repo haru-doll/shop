@@ -10,7 +10,6 @@ const config = {
 			assets: 'build',
 			fallback: null,
 			precompress: false,
-			trailingSlash: 'always'
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/shop' : ''
@@ -18,6 +17,7 @@ const config = {
 		prerender: {
 			default: true
 		},
+		trailingSlash: 'always',
 		appDir: 'internal'
 	}
 };
