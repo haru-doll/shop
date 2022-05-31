@@ -1,7 +1,8 @@
 <script>
+    export const prerender = true;
+
 	import { base } from '$app/paths';
 	import { lang } from './language.ts';
-	export const prerender = true;
 
 	import products from '$lib/products.json';
 </script>

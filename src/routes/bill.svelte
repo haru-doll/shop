@@ -1,6 +1,5 @@
 <script>
 	import { lang } from './language.ts';
-	export const prerender = true;
 
 	import { page } from '$app/stores';
 	const bill = JSON.parse(atob(decodeURIComponent($page.url.searchParams.get('b'))));

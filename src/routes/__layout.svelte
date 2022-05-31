@@ -1,9 +1,10 @@
 <script>
+    export const prerender = true;
+
 	import '../app.css';
 	import { base } from '$app/paths';
 
 	import { lang } from './language.ts';
-	export const prerender = true;
 
 	const year = new Date().getFullYear();
 </script>

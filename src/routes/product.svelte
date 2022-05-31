@@ -1,6 +1,5 @@
 <script>
 	import { lang } from './language.ts';
-	export const prerender = true;
 
 	import Carousel from '@beyonk/svelte-carousel';
 
