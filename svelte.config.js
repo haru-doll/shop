@@ -17,8 +17,8 @@ const config = {
 		prerender: {
 			default: true
 		},
-		trailingSlash: 'always',
-		appDir: 'internal'
+		appDir: 'internal',
+		trailingSlash: 'always'
 	}
 };
 
