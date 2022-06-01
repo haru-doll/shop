@@ -1,6 +1,7 @@
 <script>
 	import Carousel from '@beyonk/svelte-carousel';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { lang } from './language.ts';
 	import { userEmail, userLink, userName } from './user.ts';
@@ -114,7 +115,7 @@
 				})
 			)
 		);
-		goto(`https://haru-doll.github.io/shop?b=${billInfo}`);
+		window.location.assign(`?b=${billInfo}`);
 	}
 </script>
 
@@ -441,7 +442,7 @@
 		<div class="flex flex-wrap -m-4">
 			{#each Object.entries(products) as [id, product] (id)}
 				<div class="lg:w-1/4 md:w-1/2 p-4 w-full duration-200 hover:scale-105 hover:drop-shadow-xl">
-					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="https://haru-doll.github.io/shop?p={id}">
+					<a class="block relative md:h-48 sm:h-96 h-64 rounded overflow-hidden" href="{base}?p={id}" sveltekit:reload>
 						<img
 							alt="Preview"
 							class="object-cover object-center w-full h-full block"
