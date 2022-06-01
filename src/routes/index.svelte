@@ -1,7 +1,3 @@
-<script context="module">
-    export const prerender = false;
-</script>
-
 <script>
 	import Carousel from '@beyonk/svelte-carousel';
 	import { page } from '$app/stores';
