@@ -1,6 +1,5 @@
 <script>
 	import '../app.css';
-	import { base } from '$app/paths';
 
 	import { lang } from './language.ts';
 
@@ -9,7 +8,7 @@
 
 <header class="text-gray-600 bg-slate-50 body-font drop-shadow-md">
 	<div class="container mx-auto flex p-5 flex-row items-center title-font font-medium text-xl">
-		<a class="flex items-center text-gray-900" href="{base}/">
+		<a class="flex items-center text-gray-900" href="https://haru-doll.github.io/shop">
 			<img alt="Icon" src="https://i.imgur.com/ri3vPQ3.png" class="w-10 h-10" />
 			<span class="ml-3">Harudoll</span>
 		</a>
@@ -27,7 +26,7 @@
 	<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
 		<a
 			class="flex title-font font-medium items-center md:justify-start justify-center text-white"
-			href="{base}/"
+			href="https://haru-doll.github.io/shop"
 		>
 			<img alt="Logo" src="https://i.imgur.com/usk8b0f.png" class="w-12 h-12" />
 			<span class="ml-3 text-xl">Harudoll</span>
