@@ -233,13 +233,13 @@
 <section class="text-gray-600 body-font overflow-hidden">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="lg:w-4/5 mx-auto flex flex-wrap">
-			<div class="md:w-1/2 w-full overflow-hidden">
-				<Carousel perPage={1} duration={500}>
+			<div class="md:w-1/2 w-full rounded-lg overflow-hidden">
+				<Carousel perPage={1} duration={500} autoplayDuration={3000} arrows={false}>
 					{#each data.previews as preview}
 						<a href={preview} target="_blank">
 							<img
 								alt="Preview"
-								class="aspect-34 h-auto w-full object-cover object-center rounded-lg"
+								class="aspect-square h-auto w-full object-cover object-center"
 								src={preview}
 							/>
 						</a>
