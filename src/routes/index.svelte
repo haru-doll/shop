@@ -96,13 +96,11 @@
 		if (errorEmail || errorName || errorLink) return;
 
 		// FIXME
-		console.log(
-			`https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`
-		);
+		// fetch(
+		// 	`https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`
+		// );
 
-		let xhr = new XMLHttpRequest();
-		xhr.open("post", `https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`, true);
-		xhr.send();
+		window.open(`https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`, '_blank');
 
 		const billInfo = encodeURIComponent(
 			btoa(
