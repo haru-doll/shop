@@ -169,7 +169,7 @@
 		<div class="container px-5 py-24 mx-auto">
 			<div class="flex flex-col text-center w-full mb-12">
 				<p class="lg:w-2/3 mx-auto mb-4 leading-relaxed text-base">
-					Sau khi tạo đơn hàng và nhận được mail xác nhận, các bạn chuyển khoản tới một trong các
+					Sau khi tạo đơn hàng, các bạn chuyển khoản tới một trong các
 					ngân hàng dưới đây, sau đó báo lại cho mình biết nhé!
 				</p>
 				<p class="lg:w-2/3 mx-auto mb-4 leading-relaxed text-base">
@@ -203,7 +203,7 @@
 				class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col mb-16 md:mb-0 items-center text-center"
 			>
 				<p class="mb-8 md:text-justify">
-					After place an order and get confirmation mail, please pay me through paypal with the note
+					After place an order, please pay me through paypal with the note
 					is order number or your username, then notice me after you paid.
 				</p>
 				<p class="mb-4">
@@ -506,11 +506,11 @@
 						</h2>
 						<p class="leading-relaxed text-justify">
 							{#if $lang === 'vn'}
-								Check caption của ảnh để xem chi tiết thông tin sản phẩm, bao gồm giá, hạn đóng
-								order, kích thước, set bao gồm những sản phẩm gì. Nếu muốn doll hoặc đồ không có
-								trong album thì inbox link mình check trực tiếp tình trạng hàng nhé.
+								Chi tiết thông tin có tại từng sản phẩm, bao gồm giá, hạn đóng order, kích thước,
+								set bao gồm những sản phẩm gì. Nếu muốn doll hoặc đồ không có trong album thì inbox
+								link mình check trực tiếp tình trạng hàng nhé.
 							{:else}
-								Each picture have information in caption, about price, deadline and which include in
+								Each item have information in caption, about price, deadline and which include in
 								set. If you have the other that you want, send me the link or picture to find more
 								information.
 							{/if}
