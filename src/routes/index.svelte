@@ -1,5 +1,4 @@
 <script>
-	import Carousel from '@beyonk/svelte-carousel';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
@@ -29,6 +28,7 @@
 
 	let bill = {};
 	let data = {};
+	let preview = 0;
 	let orderData = {};
 	let errorProduct = false;
 	let errorEmail = false;
@@ -95,9 +95,14 @@
 
 		if (errorEmail || errorName || errorLink) return;
 
-		fetch(
-			`https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`
-		);
+		// FIXME
+		// fetch(
+		// 	`https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`
+		// );
+
+		let xhr = new XMLHttpRequest();
+		xhr.open("post", `https://docs.google.com/forms/d/e/1FAIpQLScXOsHyCm9gW9-nOIzde2AIij95q2x9sDEq3CeNQ_HMbvqckg/formResponse?usp=pp_url&entry.808773888=${orderId}&entry.1131766263=${orderEmail}&entry.1660022003=${orderName}&entry.1537890040=${orderLink}&entry.26021768=${orderNote}&entry.1092599865=${orderProduct}&submit=Submit`, true);
+		xhr.send();
 
 		const billInfo = encodeURIComponent(
 			btoa(
@@ -233,18 +238,26 @@
 <section class="text-gray-600 body-font overflow-hidden">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="lg:w-4/5 mx-auto flex flex-wrap">
-			<div class="md:w-1/2 w-full rounded-lg overflow-hidden">
-				<Carousel perPage={1} duration={500} autoplayDuration={3000} arrows={false}>
-					{#each data.previews as preview}
-						<a href={preview} target="_blank">
-							<img
-								alt="Preview"
-								class="aspect-square h-auto w-full object-cover object-center"
-								src={preview}
-							/>
-						</a>
-					{/each}
-				</Carousel>
+			<div class="md:w-1/2 w-full rounded-lg overflow-hidden relative text-white">
+				<button
+					class="absolute left-0 bottom-1/2 translate-y-1/2 mx-2 p-1 rounded-full bg-black"
+					on:click={() => {preview--; if(preview < 0) preview = data.previews.length - 1}}
+				>
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+				</button>
+				<button
+					class="absolute right-0 bottom-1/2 translate-y-1/2 mx-2 p-1 rounded-full bg-black"
+					on:click={() => {preview++; if(preview >= data.previews.length) preview = 0}}
+				>
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+				</button>
+				<a href={data.previews[preview]} target="_blank">
+					<img
+						alt="Preview"
+						class="aspect-square h-auto w-full object-cover object-center"
+						src={data.previews[preview]}
+					/>
+				</a>
 			</div>
 			<div class="md:w-1/2 w-full md:pl-10 md:py-4 mt-4 md:mt-0">
 				<h1 class="text-gray-900 text-3xl title-font font-medium">{data.title[$lang]}</h1>
