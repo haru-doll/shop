@@ -5,8 +5,8 @@
 			"vn": "Doll tự sản xuất"
 		},
 		"description": {
-			"en": "DM for more information.",
-			"vn": "Gửi tin nhắn cho mình để trao đổi chi tiết về việc sản xuất doll nhé!"
+			"en": "If you want to produced doll by your own design, please DM for more information. The doll can be manufactured from at least 100 pcs.",
+			"vn": "Gửi tin nhắn cho mình để trao đổi chi tiết về việc sản xuất doll theo thiết kế riêng của bạn nhé! Mỗi mẫu cần sản xuất tối thiểu từ 100 bé."
 		},
 		"previews": [
 			"https://i.imgur.com/oYF14PO.jpg",
@@ -50,6 +50,34 @@
 				"name": { "en": "Brown hair", "vn": "Tóc nâu" },
 				"price": { "en": 10, "vn": 200 },
 				"quantity": 30
+			}
+		]
+	},
+	"3": {
+		"title": {
+			"en": "Doll Captain America & Ironman",
+			"vn": "Doll Captain America & Ironman"
+		},
+		"description": {
+			"en": "Only doll size 20cm. Deadline: July 2",
+			"vn": "Only doll 20cm. Đón cả đôi tổng tiền trừ 50k nhé! Deadline 5h chiều 2/7 nạ!"
+		},
+		"previews": [
+			"https://i.imgur.com/R0F09V5.jpg",
+			"https://i.imgur.com/K0c86X5.jpg",
+			"https://i.imgur.com/00yVxUq.jpg",
+			"https://i.imgur.com/jqdTayh.jpg"
+		],
+		"products": [
+			{
+				"name": { "en": "Captain America full", "vn": "Captain America full" },
+				"price": { "en": 22.5, "vn": 460 },
+				"quantity": null
+			},
+			{
+				"name": { "en": "Ironman deposit", "vn": "Ironman cọc" },
+				"price": { "en": 10, "vn": 200 },
+				"quantity": null
 			}
 		]
 	}
